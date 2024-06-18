@@ -1,0 +1,21 @@
+Command for Tizen-OS application download in Samsung TV via Windows:
+                  tizen install -- . -n /path of Samsung.wgt
+                  tizen install -- . -n /path of Samsung.tpk
+
+Command for Tizen-OS application download in Samsung TV via MACOS:
+                  <tizen_studio_path>/tools/ide/bin/tizen install -t <tizen_device_name> -n <path/to/your/app.wgt>
+                  Example:- tizen install -t UA43CU8000KLXL -n horizon-x-tizen.wgt
+                  <tizen_studio_path>/tools/ide/bin/tizen install -t <tizen_device_name> -n <path/to/your/app.tpk>
+
+WebOS Testing Steps:-
+The 'ares-setup-device' command is part of the webOS CLI (Command Line Interface) used for developing and managing webOS applications.
+ares-setup-device/ares-novacom
+
+1. Follow WebOS setup for Mac document until step 13
+2. Then run below command Note:- Replace LGTV with the device name you added
+command:- ares-novacom --device LGTV --getkey
+
+1. Now enter the Passphrase value you see in the developer mode app
+2. Now change the directory of the terminal to your downloaded ipk path
+3. Then run below command Note:- Replace ipk file name with the file name you downloaded from app center
+command:- ares-install --device LGTV ./horizon-x-webos-5.09.8900-11241.ipk
